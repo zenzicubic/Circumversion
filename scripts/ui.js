@@ -90,7 +90,7 @@ function changeRad(i) {
 	// Change radius of given circle
 	let c = circles[getIndex(i)];
 	c.r = c.radSlider.value / sliderPrec;
-	c.radLbl.innerHTML = "Radius: " + c.r;
+	c.radLbl.innerHTML = "Radius: " + c.r.toFixed(3);
 
 	c.drawCircles();
 	resetCanv();
@@ -210,7 +210,7 @@ class Circle {
 
 		this.radLbl = document.createElement("label");
 		this.radLbl.for = this.radSlider.id;
-		this.radLbl.innerHTML = "Radius: " + this.r;
+		this.radLbl.innerHTML = "Radius: " + this.r.toFixed(3);
 		this.div.appendChild(this.radLbl); 
 	}
 
