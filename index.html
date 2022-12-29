@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Circumversion | Circle Inversion Fractal Maker</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta charset="UTF-8">
+    	<meta name="description" content="A circle-inversion fractal generator">
+    	<meta name="keywords" content="inversion, fractal, circle, chaos">
+   		<meta name="author" content="Zenzicubic">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="scripts/utils.js"></script>
+		<script src="scripts/script.js"></script>
+		<script src="scripts/ui.js"></script>
+		<link rel="shortcut icon" href="assets/icon.png">
+		<link rel="stylesheet" href="scripts/style.css">
+	</head>
+	<body>
+		<canvas id="canvas"></canvas>
+		<svg id="widgets" width="100vh" height="100vh"></svg>
+		<div id="controls">
+			<h1>Circle Inversion Fractal Maker</h1>
+			<p class="addendum" onclick="showDropdown('whatIs')" id="whatIs">+ What are these fractals?</p>
+			<p id="whatIsText" class="description" hidden>These are circle inversion fractals, made by repeatedly iterating a geometric transformation called <a href="https://users.math.yale.edu/public_html/People/frame/Fractals/CircInvFrac/welcome.html" target="_blank">circle inversion</a> on a given point about random circles. This demo lets you play with the circles and see what you get. Source code is on <a href="">GitHub</a>. Made in vanilla JS with &hearts; by <a href="https://zenzicubic.tk" target="_blank">Zenzicubic</a>.</p>
+			<p class="addendum" onclick="showDropdown('howTo')" id="howTo">+ How do I use this?</p>
+			<p id="howToText" class="description" hidden>Right-click to add a new circle. Click and drag on the center of a circle to move it. When you hover over a circle, its corresponding list option will light up. Press the <strong>Delete</strong> button to delete a circle. Use the slider to change the circle's radius. Press <strong>Get shareable link</strong> to copy a link to your creation to the clipboard, and <strong>Save image</strong> to save your creation as an image.</p>
+
+			<button onclick="deleteCircles()">Delete all circles</button>
+			<a id="downloadBtn" download="fractal.png">
+				<button onclick="saveImg()">Save image</button>
+			</a>
+			<button onclick="getLink()">Get shareable link</button><br>
+
+			<input type="checkbox" id="restricted" onchange="changeRestricted()">
+			<label for="restricted">Apply restrictions</label><br><br><br>
+
+			<hr>
+			<h2>Presets</h2>
+			<select id="presets">
+				<option>Necklace</option>
+				<option>Dyad</option>
+				<option>Square</option>
+				<option>Inverted checkerboard</option>
+				<option>Inverted honeycomb</option>
+				<option>Jewel triangle</option>
+				<option>Chain</option>
+				<option>Leaves</option>
+			</select><br>
+			<button onclick="loadPreset()">Load preset</button>
+
+			<h2>Circles</h2>
+			<div id="circles"></div>
+		</div>
+	</body>
+</html>

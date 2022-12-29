@@ -1,0 +1,90 @@
+body {
+	background: #070707;
+	overflow: hidden;
+}
+
+p, h1, h2, h3, label {
+	color: white;
+	font-family: Arial;
+}
+
+a {
+	color: #bb86fc;
+}
+
+button {
+	background: #BB86FC;
+	border: none;
+	border-radius: 5px;
+	font-size: 14px;
+
+	padding: 15px;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+a:hover, button:hover {
+	filter: brightness(1.2);
+}
+
+hr {
+	background: white;
+	border: none;
+	height: 2px;
+}
+
+.description {
+	font-size: 14px;
+}
+
+.circleBox {
+	width: 100%;
+	border-top: 2px solid white;
+}
+
+.selected {
+	background: #4b4b4b;
+}
+
+.addendum {
+	color: #bb86fc;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+#canvas {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+#widgets {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+#controls {
+	position: absolute;
+	left: 100vh;
+	top: 0px;
+
+	width: calc(100vw - 100vh - 0.5vw);
+	height: 100vh;
+	border-left: 5px solid white;
+
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+#splash {
+	text-align: center;
+	margin: auto;
+	width: 50%;
+	border: 3px solid white;
+	padding: 10px;
+}
+
+#errorImg {
+	width: 80%;
+}
