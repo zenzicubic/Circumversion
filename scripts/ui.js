@@ -10,7 +10,7 @@ const sliderPrec = 1000;
 
 function load() {
 	// Check for mobile
-	if (window.innerWidth < 1100) {
+	if (window.matchMedia("only screen and (max-width: 1000px)").matches) {
 		window.location.href = "mobile-landing.html";
 	}
 
@@ -197,7 +197,7 @@ class Circle {
 		this.break = document.createElement("br");
 		this.div.appendChild(this.break);
 
-		// Add input sliders
+		// Add input sliders and label
 		this.radSlider = document.createElement("input");
 		this.radSlider.id = "slider" + this.index;
 		this.radSlider.setAttribute("onchange", "changeRad(" + this.index + ")");
